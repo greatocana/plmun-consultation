@@ -1,0 +1,39 @@
+# PANG DISABLE SA DIRECTORY
+Options All -Indexes
+
+# PANG DISABLE SA MGA FOLDER
+<FilesMatch "\.(htaccess|htpasswd|ini|git|gitignore)$">
+	Order Allow,Deny
+	Deny from all
+</FilesMatch>
+
+# KEEP ALIVE APACHE
+<ifModule mod_env.c>
+	SetEnv KeepAlive On
+	SetEnv KeepAliveTimeout 606
+	SetEnv MaxKeepAliveRequests 100
+</ifModule>
+
+<ifModule mod_headers.c>
+	Header unset Connection
+	Header set Connection keep-alive
+	Header unset Keep-Alive
+	Header set Keep-Alive timeout=60,max=100
+</ifModule>
+
+# REMOVE .PHP
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.php [NC,L]
+
+# REMOVE .HTML
+RewriteEngine on 
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.*)$ $1.html [NC,L]
+
+RewriteRule ^route(.*) controller/index.php$1
+RewriteRule ^([^/]*)$ views/$1 [L]
+RewriteRule ^css(.*)$ views/css/$1 
+RewriteRule ^js(.*)$ views/js/$1 
