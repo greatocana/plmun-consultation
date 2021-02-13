@@ -2,9 +2,10 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLMUN STUDENT CONSULTATION SYSTEM</title>
+    <link rel="shortcut icon" href="logo_plmun.png" type="image/x-icon" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
@@ -12,14 +13,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/index.css" />
-    <script src="js/axios.js"></script>
-    <script src="js/validation.js"></script>
+    <link rel="stylesheet" href="css/register.css" />
+	<script src="js/axios.js"></script>
+    <<script src="js/validation.js"></script>
     <script src="js/sweetalert.js"></script>
-    <title>Document</title>
-
-
-
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -40,33 +37,73 @@
     <div class="jumbotron text-center">
         <h1>STUDENT CONSULTATION MANAGEMENT SYSTEM</h1>
     </div>
-    <!--login-->
-    <form id="form_login" class="container-fluid text-left" action="javascript:void(0)">
-        <h2>Login Here</H2>
 
-        <label>Student Number</label>
-        <input type="text" id="stud_no" placeholder="Student Number">
+    <form id="form_register" class="container-fluid text-left" action="javascript:void(0)">
+        <h2>SIGN UP</h2>
+    
+        <label>Student No.</label>
+        <input type="text" id="stud_no" placeholder="Student No.">
 
-        <label>password</label>
+        <label>First Name</label>
+        <input type="text" id="Fname" placeholder="First Name">
+
+        <label>Middle Name</label>
+        <input type="text" id="Mname" placeholder="middle Name">
+
+        <label>Last Name</label>
+        <input type="text" id="Lname" placeholder="Last Name">
+
+        <label>Course</label>
+        <select id="course">
+            <option value""> Select Course</option>
+            <option value""> Bachelor of Arts in Communication</option>
+            <option value""> Bachelor of Arts in Political Science</option>
+            <option value""> Bachelor of Science in Psychology</option>
+            <option value""> Bachelor of Science in Business Administration</option>
+            <option value""> Bachelor of Science in Accountancy</option>
+            <option value""> Bachelor of Science in Criminology</option>
+            <option value""> Bachelor of Science in Computer Science</option>
+            <option value""> Bachelor of Science in Information Technology</option>
+            <option value""> Associate in Computer Technology</option>
+            <option value""> Bachelor of Elementary Education (BEEd)</option>
+            <option value""> Bachelor of Secondary Education (BSEd)</option>
+        </select><br>
+
+        <label>Year</label>
+        <input type="text" id="year" placeholder="Year">
+
+        <label>Password</label>
         <input type="password" id="password" placeholder="Password">
 
-        <button type="submit" onClick="login()">Login</button>
+        <label>Re Password</label>
+        <input type="password" id="re_password" placeholder="Re_Password">
 
-        <a href="register.php" class="ca">Create an account</a>
+        <button type="submit" onClick="register()"> Sign Up </button>
+        <a href="index.php" class="ca">Already have an account?</a>
     </form>
-    <!--end-login-->
 
-
-
-
-
-
-<script src="js/auth.js"></script>
+    <footer class="container-fluid text-center">
+        <a href="#myPage" title="To Top">
+            <span class="glyphicon glyphicon-chevron-up"></span>
+        </a>
+        <p>
+            PLMUN
+            <br>
+            <br>
+            <br>
+            University Road NBP Reservation
+            <br>
+            Barangay Poblacion 1770 Muntinlupa City
+            <br>
+            Philippines
+        <div class="fa fa-facebook">:</div>
+        <a href="https://www.facebook.com/plmunofficial/?ref=page_internal">@plmunofficial</a><br>
+        Search for @plmunofficial on Facebook or Messenger to find this Page easily.
+        </p>
+    </footer>
+	<<script src="js/auth.js"></script>
 </body>
 </html>
-
-
-
 
 
 /*

@@ -49,7 +49,7 @@
             
             /* Ito ung mga ipapasa sa model, ung kinocall nung $this->sample */
             $AuthModel->password = Hash::encrypt(Request::post('password'),$key);
-            $AuthModel->stud_no = Request::post('stud_no');
+            $AuthModel->stud_no = Request::post('stud_no',false);
             $AuthModel->Fname = Request::post('Fname');
             $AuthModel->Mname = Request::post('Mname');
             $AuthModel->Lname = Request::post('Lname');
@@ -57,19 +57,29 @@
             $AuthModel->year = Request::post('year');
             
             // ito yung name nung function sa model
-            if($AuthModel->register()) {
-				$user_arr=array(
-					"status"  => true,
-					"message" => 'Success!'
-				);
-            } else {
+            // yan haha
+            if($AuthModel->existing_user()) { // ito function to dun sa Authmodel.php , may query doon na kapag meron stud no na, magrereturn ng true
                 $user_arr=array(
-					"status"  => false,
-					"message" => 'Existing Username!'
-				);
+                    "status"  => false,
+                    "message" => 'Existing Student No.!'
+                );
+            }else {
+                 if($AuthModel->register()) {
+                    $user_arr=array(
+                        "status"  => true,
+                        "message" => 'Success!'
+                    );
+                } else{
+                    $user_arr=array(
+                        "status"  => false,
+                        "message" => 'Failed!'
+                    );
+                }
             }
 
 			echo json_encode($user_arr);
         }
+
+        
     }
 ?>

@@ -1,0 +1,140 @@
+body {
+  justify-content: center;
+  font: 400 15px Lato, sans-serif;
+  line-height: 1.8;
+  color: black;
+}
+form {
+  width: 500px;
+  border: 2px solid #ccc;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+}
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+input {
+  display: block;
+  border: 2px solid #ccc;
+  width: 95%;
+  padding: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+label {
+  color: #888;
+  font-size: 18px;
+  padding: 10px;
+}
+button {
+  float: right;
+  background: #555;
+  padding: 10px 15px;
+  color: #fff;
+  border-radius: 5px;
+  margin-right: 10px;
+  border: none;
+}
+button:hover {
+  opacity: 0.7;
+}
+
+h2 {
+  font-size: 24px;
+  text-transform: uppercase;
+  color: #303030;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.error {
+  background: #f2dede;
+  color: #a94442;
+  padding: 10px;
+  width: 95%;
+  border-radius: 5px;
+}
+
+.jumbotron {
+  background-color: #1c4d6d;
+  color: rgb(205, 232, 240);
+  padding: 30px 25px;
+  font-family: Montserrat, sans-serif;
+}
+.container-fluid {
+  padding: 60px 50px;
+}
+.bg-grey {
+  background-color: #f6f6f6;
+}
+
+.navbar {
+  margin-bottom: 0;
+
+  background-color: #1c4d6d;
+  z-index: 9999;
+  border: 0;
+  font-size: 12px !important;
+  line-height: 1.42857143 !important;
+  letter-spacing: 1px;
+  border-radius: 0;
+  font-family: Montserrat, sans-serif;
+  padding-bottom: 2px;
+}
+.ca {
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  color: #444;
+}
+.ca:hover {
+  text-decoration: underline;
+}
+
+@keyframes slide {
+  0% {
+    opacity: 0;
+    transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@-webkit-keyframes slide {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(70%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0%);
+  }
+}
+@media screen and (max-width: 768px) {
+  .col-sm-4 {
+    text-align: center;
+    margin: 25px 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fa {
+    padding: 5px;
+    font-size: 20px;
+    width: 20px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa-facebook {
+    background: WHITE;
+    color: #3b5998;
+  }
+}

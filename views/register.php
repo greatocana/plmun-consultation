@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/register.css" />
 	<script src="js/axios.js"></script>
+    <<script src="js/validation.js"></script>
+    <script src="js/sweetalert.js"></script>
 </head>
 
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
@@ -36,9 +38,9 @@
         <h1>STUDENT CONSULTATION MANAGEMENT SYSTEM</h1>
     </div>
 
-    <form class="container-fluid text-left" action="javascript:void(0)">
+    <form id="form_register" class="container-fluid text-left" action="javascript:void(0)">
         <h2>SIGN UP</h2>
-
+    
         <label>Student No.</label>
         <input type="text" id="stud_no" placeholder="Student No.">
 
@@ -58,10 +60,10 @@
             <option value""> Bachelor of Arts in Political Science</option>
             <option value""> Bachelor of Science in Psychology</option>
             <option value""> Bachelor of Science in Business Administration</option>
-            <option value""> Bachelor of Arts in Accountancy</option>
-            <option value""> Bachelor of Arts in Criminology</option>
-            <option value""> Bachelor of Arts in Computer Science</option>
-            <option value""> Bachelor of Arts in Information Technology</option>
+            <option value""> Bachelor of Science in Accountancy</option>
+            <option value""> Bachelor of Science in Criminology</option>
+            <option value""> Bachelor of Science in Computer Science</option>
+            <option value""> Bachelor of Science in Information Technology</option>
             <option value""> Associate in Computer Technology</option>
             <option value""> Bachelor of Elementary Education (BEEd)</option>
             <option value""> Bachelor of Secondary Education (BSEd)</option>
@@ -77,7 +79,7 @@
         <input type="password" id="re_password" placeholder="Re_Password">
 
         <button type="submit" onClick="register()">Sign Up</button>
-        <a href="dashboard.php" class="ca">Already have an account?</a>
+        <a href="index.php" class="ca">Already have an account?</a>
     </form>
 
     <footer class="container-fluid text-center">

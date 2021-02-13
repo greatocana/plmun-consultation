@@ -61,20 +61,21 @@
             return false;
 
         }
-    }
 
-    function existing_user() {
-        $query = 'SELECT * FROM tbl_students WHERE stud_no=:stud_no';
+        function existing_user() {
 
-        $exec = $this->conn->prepare($query);
-        $exec->bindParam(":stud_no", $this->stud_no);
-        $exec->execute();
-        
-        if($exec->rowCount() > 0){
-            return true;
-        }else{
-            return false;
+            $query = 'SELECT * FROM tbl_students WHERE stud_no=:stud_no';
+
+            $exec = $this->conn->prepare($query);
+            $exec->bindParam(":stud_no", $this->stud_no);
+            $exec->execute();
+            
+            if($exec->rowCount() > 0){
+                return true;
+            }else{
+                return false;
+            }
+            
         }
     }
-
 ?>
